@@ -16,7 +16,7 @@
 
 - **Backend**: Go 1.24+
 - **Router**: Gorilla Mux
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript (Написано ИИ)
 
 ## 📦 Установка и запуск
 
