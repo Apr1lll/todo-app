@@ -64,13 +64,17 @@ python3 -m http.server 8080
 Перейди по адресу: http://localhost:8080
 
 **📋 API Endpoints**
-Метод URL Описание
-GET /tasks Получить все задачи
-GET /tasks?completed=false Получить незавершенные задачи
-GET /tasks/{title} Получить задачу по названию
-POST /tasks Создать новую задачу
-PATCH /tasks/{title} Изменить статус задачи
-DELETE /tasks/{title} Удалить задачу
+
+## 📋 API Endpoints
+
+| Метод     | URL                      | Описание               | Тело запроса                           | Ответ                      |
+| --------- | ------------------------ | ---------------------- | -------------------------------------- | -------------------------- |
+| 🟢 GET    | `/tasks`                 | Получить все задачи    | -                                      | `200 OK`                   |
+| 🟢 GET    | `/tasks?completed=false` | Получить незавершенные | -                                      | `200 OK`                   |
+| 🟢 GET    | `/tasks/{title}`         | Получить задачу        | -                                      | `200 OK` / `404 Not Found` |
+| 🟡 POST   | `/tasks`                 | Создать задачу         | `{"Title":"...", "Description":"..."}` | `201 Created`              |
+| 🟠 PATCH  | `/tasks/{title}`         | Обновить статус        | `{"Complete":true/false}`              | `200 OK`                   |
+| 🔴 DELETE | `/tasks/{title}`         | Удалить задачу         | -                                      | `204 No Content`           |
 
 **🔍 Примеры запросов**
 -Создать задачу
